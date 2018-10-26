@@ -29,15 +29,15 @@
 	.gnb .depth_2 a:hover{text-decoration:underline;font-weight:bold;color:green;}
 
 section{width:100%;}
-	.banner{overflow:hidden;width:100%;position:relative;}
+	.banner{/*overflow:hidden;*/width:100%;position:relative;}
 	.banner>ul{width:600%;position:relative;height:440px;}
-
-	.banner>ul>li{width:100%;position: absolute;height:440px;}
+	.banner>ul:after{content:"";display:block;clear:both;}
+	.banner>ul>li{width:100%;height:440px;float:left;}
 	.banner>ul>li:nth-child(1){background:url(../images/써브웨이_메인배너_01.jpg) no-repeat center;}
-	.banner>ul>li:nth-child(2){left:100%;background:url(../images/써브웨이_메인배너_02.jpg) no-repeat;}
-	.banner>ul>li:nth-child(3){left:200%;background:url(../images/써브웨이_메인배너_03.jpg) no-repeat;}
-	.banner>ul>li:nth-child(4){left:300%;background:url(../images/써브웨이_메인배너_04.jpg) no-repeat;}
-	.banner>ul>li:nth-child(5){left:400%;background:url(../images/써브웨이_메인배너_05.jpg) no-repeat;}
-	.banner>ul>li:nth-child(6){left:500%;background:url(../images/써브웨이_메인배너_06.jpg) no-repeat;}
+	.banner>ul>li:nth-child(2){background:url(../images/써브웨이_메인배너_02.jpg) no-repeat;}
+	.banner>ul>li:nth-child(3){background:url(../images/써브웨이_메인배너_03.jpg) no-repeat;}
+	.banner>ul>li:nth-child(4){background:url(../images/써브웨이_메인배너_04.jpg) no-repeat;}
+	.banner>ul>li:nth-child(5){background:url(../images/써브웨이_메인배너_05.jpg) no-repeat;}
+	.banner>ul>li:nth-child(6){background:url(../images/써브웨이_메인배너_06.jpg) no-repeat;}
 
 	.btn{width:100%;position:absolute;bottom:0;text-align:center;cursor:pointer;}
