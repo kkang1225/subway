@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>subway_main</title>
+	<link rel="stylesheet" href="../CSS/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			 $(".depth_2>ul").hide();
+			 $(".gnb>ul>li").mouseenter(function(){
+			 	$(".depth_2>ul").stop().slideDown();})
+			 .mouseleave(function(){
+			 	$(".depth_2>ul").stop().slideUp();
+			 });
+		});
+	</script>
+</head>
+<body>
+	<div id="header_wrap">
+		<div class="header">
+			<h1 class="logo">
+				<a href="#">SUBWAY</a>
+			</h1>
+			<div class="util_menu">
+			<ul>
+				<li><a href="#">매장찾기</a></li>
+				<li><a href="#">가맹신청 · 문의</a></li>
+				<li><a href="#" >고객센터</a></li>
+				<li><a href="#" class="global_subway">Global Subway</a></li>
+			</ul>
+			</div>
+			<nav class="gnb">
+				<ul>
+					<li>
+						<a href="#" class="depth_1">메뉴소개</a>
+						<div class="depth_2">
+							<ul>
+								<li><a href="#">샌드위치</a></li>
+								<li><a href="#">찹샐러드</a></li>
+								<li><a href="#">추가토핑</a></li>
+								<li><a href="#">사이드 · 음료</a></li>
+								<li><a href="#">단체메뉴</a></li>
+								<li><a href="#">신선한 재료 소개</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="depth_1">이용방법</a>
+						<div class="depth_2">
+							<ul>
+								<li><a href="#">써브웨이 이용방법</a></li>
+								<li><a href="#">단체메뉴 이용방법</a></li>
+								<li><a href="#">주문서비스</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="depth_1">새소식</a>
+						<div class="depth_2">
+							<ul>
+								<li><a href="#">이벤트 · 프로모션</a></li>
+								<li><a href="#">뉴스 · 공지사항</a></li>
+								<li><a href="#">TV광고</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="depth_1">써브웨이</a>
+						<div class="depth_2">
+							<ul>
+								<li><a href="#">써브웨이 역사</a></li>
+								<li><a href="#">써브웨이 약속</a></li>
+								<li><a href="#">써브웨이 사회공헌</a></li>
+								<li><a href="#">샌드위치 아티스트 지원</a></li>
+								<li><a href="#">매장찾기</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="depth_1">가맹점</a>
+						<div class="depth_2">
+							<ul>
+								<li><a href="#">써브웨이 프랜차이즈</a></li>
+								<li><a href="#">가맹관련 FAQ</a></li>
+								<li><a href="#">가맹신청 · 문의</a></li>
+								<li><a href="#">지사안내</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<section>
+		<div class="banner">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</section>
+</body>
+</html>
