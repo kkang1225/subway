@@ -15,6 +15,41 @@
 			 .mouseleave(function(){
 			 	$(".depth_2>ul").stop().slideUp();
 			 });
+
+			 var current = 0;
+
+			 var liCount = $(".banner>ul>li").length;
+			 var wrapWidth = $(window).outerWidth();
+
+			 $(".banner>ul>li").css("width",wrapWidth);
+			 $(".banner>ul").css("width",wrapWidth*liCount);
+
+			 $(window).resize(function(){
+
+
+			 	wrapWidth = $(window).outerWidth();
+
+			 $(".banner>ul>li").css("width",wrapWidth);
+			 $(".banner>ul").css("width",wrapWidth*liCount);
+			 // $(".banner>ul").css({left:current=wrapWidth*-1});
+			 });
+
+			 $(".prev").click(function(){
+			 	if(current>=0){current--}
+			 	if(current==-1){current=5}	
+			 		console.log(current);
+			 	listMove();
+			 });
+			 $(".next").click(function(){
+			 	if(current<=5){current++}
+			 	if(current==6){current=0}
+			 		console.log(current);	
+			 	listMove();
+			 });
+
+			 function listMove(){
+			 	$(".banner>ul").stop().animate({left:wrapWidth*current*-1});
+			 };
 		});
 	</script>
 </head>
@@ -104,6 +139,10 @@
 				<li>5</li>
 				<li>6</li>
 			</ul>
+			<div class="btn">
+				<span class="prev">이전</span>
+				<span class="next">다음</span>
+			</div>
 		</div>
 	</section>
 </body>
