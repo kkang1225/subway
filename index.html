@@ -20,19 +20,26 @@
 
 			 var liCount = $(".banner>ul>li").length;
 			 var wrapWidth = $(window).outerWidth();
+				if(wrapWidth<1280){
 
+					wrapWidth=1280;
+				}
+			$(".banner").css("width",wrapWidth);
 			 $(".banner>ul>li").css("width",wrapWidth);
 			 $(".banner>ul").css("width",wrapWidth*liCount);
 
 			 $(window).resize(function(){
+			 	
+				wrapWidth = $(window).outerWidth();
+				if(wrapWidth<1280){
 
-
-			 	wrapWidth = $(window).outerWidth();
-
+					wrapWidth=1280;
+				}
+			$(".banner").css("width",wrapWidth);
 			 $(".banner>ul>li").css("width",wrapWidth);
 			 $(".banner>ul").css("width",wrapWidth*liCount);
-			$(".banner>ul").css({left:current*wrapWidth*-1})
-			 });
+			$(".banner>ul").css({left:current*wrapWidth*-1});
+			});
 
 			 $(".prev").click(function(){
 			 	if(current>=0){current--}
