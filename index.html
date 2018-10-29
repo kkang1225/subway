@@ -9,6 +9,12 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script>
 		$(function(){
+
+			$(".close_btn").click(function(){
+				$(".line_banner").hide();
+				$(this).hide();
+			});
+
 			 $(".depth_2>ul").hide();
 			 $(".gnb>ul>li").mouseenter(function(){
 			 	$(".depth_2>ul").stop().slideDown();})
@@ -17,7 +23,7 @@
 			 });
 
 			 var current = 0;
-
+			 var clickInterval;
 			 var liCount = $(".banner>ul>li").length;
 			 var wrapWidth = $(window).outerWidth();
 				if(wrapWidth<1280){
@@ -54,15 +60,39 @@
 			 	listMove();
 			 });
 
+			 $(".pager").click(function(){
+			 	current = $(this).index();
+			 	listMove();
+			 });
+
 			 function listMove(){
-			 	$(".banner>ul").stop().animate({left:wrapWidth*current*-1});
+			 	$(".banner>ul").stop().animate({left:wrapWidth*current*-1},function(){
+			 		$(".pager").css("color","#fff");
+			 		$(".pager").eq(current).css("color","#ffc300");
+			 	});
 			 };
+
+			 timer();
+
+			 function timer(){
+			 	clickInterval = setInterval(function(){
+			 		$(".next").trigger("click");
+			 	},3000);
+			 };
+
+			 $(".banner").on({mouseover:function(){clearInterval(clickInterval);},
+			 	mouseout:function(){timer();}
+
+			});
 		});
 	</script>
 </head>
 <body>
 	<div id="header_wrap">
+		<img src="./images/써브웨이_띠배너.jpg" alt="subway_line_banner" class="line_banner">
+		<img src="./images/main_top_line_banner_closebtn.png" alt="close_btn" class="close_btn">
 		<div class="header">
+
 			<h1 class="logo">
 				<a href="#">SUBWAY</a>
 			</h1>
@@ -149,6 +179,14 @@
 			<div class="btn">
 				<span class="prev">이전</span>
 				<span class="next">다음</span>
+			</div>
+			<div class="banner_pager">
+				<span class="pager" style="color:#ffc300;">●</span>
+				<span class="pager">●</span>
+				<span class="pager">●</span>
+				<span class="pager">●</span>
+				<span class="pager">●</span>
+				<span class="pager">●</span>
 			</div>
 		</div>
 	</section>

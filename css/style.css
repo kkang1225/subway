@@ -1,5 +1,6 @@
 @charset "utf-8";
-#header_wrap{width:100%;border-top:5px solid #009223;min-width:1280px;}
+#header_wrap{width:100%;border-top:5px solid #009223;min-width:1280px;position:relative;}
+	.close_btn{width:40px;height:40px;position:absolute;right:350px;top:0;cursor:pointer;}
 .header{width:1280px;height:165px;margin:0 auto;position:relative;left:0;top:0;}
 	.logo{position:absolute;left:50%;top:35px;margin-left:-101px;}
 	.logo a{display:block;background:url(../images/logo_w.png) 0 0 no-repeat;width:202px;height:40px;
@@ -40,4 +41,6 @@ section{width:100%;}
 	.banner>ul>li:nth-child(5){background:url(../images/써브웨이_메인배너_05.jpg) no-repeat center;}
 	.banner>ul>li:nth-child(6){background:url(../images/써브웨이_메인배너_06.jpg) no-repeat center;}
 
-	.btn{width:100%;position:absolute;bottom:0;text-align:center;cursor:pointer;}
+	.btn{width:100%;position:absolute;bottom:0;text-align:center;cursor:pointer;display:none;}
+	.banner_pager{width:100%;position:absolute;bottom:30px;right:-500px;cursor:pointer;text-align:center;
+		color:#fff;}
