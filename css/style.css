@@ -44,3 +44,30 @@ section{width:100%;}
 	.btn{width:100%;position:absolute;bottom:0;text-align:center;cursor:pointer;display:none;}
 	.banner_pager{width:100%;position:absolute;bottom:30px;right:-500px;cursor:pointer;text-align:center;
 		color:#fff;}
+
+	.quick_menu{width:100%;position:relative;}	
+	.quick_menu_content{width:600px;height:80px;margin:0 auto;position:absolute;top:-20px;right:330px;}
+	.quick_menu_content:after{content:"";display:block;clear:both;}
+	.quick_menu_content>div{float:left;text-align:center;line-height:75px;font-size:20px;font-weight:bold;}	
+	.quick_menu_content>.store{width:50%;height:80px;background:#ffce32 url(../images/icon_map.png) no-repeat;
+		background-position:80px 25px;border-radius:30px 0 0 0;}
+		/*.store>img{width:34px;height:30px;}*/	
+	.quick_menu_content>.franchise{width:50%;height:80px;background:#009223 url(../images/icon_franchise.png) no-repeat;
+		background-position:70px 25px;border-radius:0 0 30px 0;color:#fff;padding-left:30px;}
+	
+	.subway_menu{width:1280px;height:560px;margin:0 auto;padding:60px 0 0;}
+	.subway_menu:after{content:"";display:block;clear:both;}
+		.left{float:left;height:70px;background:url(../images/bul_tit.png) no-repeat;font-size:40px;font-weight:bold;}
+		.right{float:right;margin-top:20px;}
+		.right:after{content:"";display:block;clear:both;}
+		.right>li{float:left;border-left:1px solid #000;}
+		.right>li:first-child{border:none;}
+		.right>li>a{display:block;text-align:center;padding:0 20px;font-weight:bold;color:#666666;}			
+
+		.sandwich{width:1200px;margin:80px auto;overflow:hidden;} 
+		.sandwich>ul{width:1750px;height:182px;padding:0 5px;}
+		.sandwich>ul:after{content:"";display:block;clear:both;}
+		.sandwich>ul>li{width:260px;height:182px;float:left;margin:0 0 0 30px;}
+
+		.prev{width:50px;height:50px;background:url(../images/icon_event_slider_arr.png) no-repeat 0 0;position:absolute;}
+		.next{width:50px;height:50px;background:url(../images/icon_event_slider_arr.png) no-repeat 100% 0;position:absolute;}
